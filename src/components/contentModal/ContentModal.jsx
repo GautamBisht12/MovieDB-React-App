@@ -41,9 +41,11 @@ export default function ContentModal({ children, media_type, id, className }) {
   const handleClose = () => setOpen(false);
 
   const fetchData = async () => {
+    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+
     try {
       const { data } = await axios.get(
-        `https://api.themoviedb.org/3/${media_type}/${id}?api_key=68c3ad2897ef4acd7987e0e9218396c0&language=en-US`
+        `https://api.themoviedb.org/3/${media_type}/${id}?api_key=${API_KEY}&language=en-US`
       );
       setContent(data);
     } catch (error) {

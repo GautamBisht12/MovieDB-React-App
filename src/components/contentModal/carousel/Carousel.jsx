@@ -11,7 +11,7 @@ const Carousel = ({ media_type, id }) => {
   const [credits, setCredits] = useState([]);
 
   const fetchCredits = async () => {
-    const API_KEY = import.meta.env.VITE_API_KEY;
+    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
 
     try {
       const { data } = await axios.get(
