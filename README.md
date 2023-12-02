@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # MovieDB React App
 
 ![Todo List App Screenshot](./src/assets/trending.png)
@@ -70,4 +72,4 @@ VITE_API_KEY=your-tmdb-api-key
 
 ## Acknowledgements
 
-This MovieDB React App was developed with the invaluable guidance and knowledge gained from a YouTube tutorial created by [RoadsideCoder](https://youtu.be/vxUfx4aM5d8?si=H0UolCKMk4VW4MGP).
+# This MovieDB React App was developed with the invaluable guidance and knowledge gained from a YouTube tutorial created by [RoadsideCoder](https://youtu.be/vxUfx4aM5d8?si=H0UolCKMk4VW4MGP).
