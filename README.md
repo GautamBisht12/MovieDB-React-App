@@ -67,3 +67,7 @@ To utilize the TMDb API, acquire an API key and add it to the `.env` file:
 VITE_API_KEY=your-tmdb-api-key
 
 ```
+
+## Acknowledgements
+
+This MovieDB React App was developed with the invaluable guidance and knowledge gained from a YouTube tutorial created by [RoadsideCoder](https://youtu.be/vxUfx4aM5d8?si=H0UolCKMk4VW4MGP).
