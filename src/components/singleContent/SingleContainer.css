@@ -1,0 +1,21 @@
+.poster-container {
+  display: flex;
+  justify-content: center;
+}
+
+.poster-container img {
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  height: 35vh;
+  transition: 0.2s all ease-in-out;
+  padding: 2px;
+}
+.poster-container:hover {
+  scale: 1.04;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+.single-card:hover {
+  background-color: #22092c;
+  transition: background-color 0.3s ease;
+  color: white;
+}
