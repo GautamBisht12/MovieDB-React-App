@@ -6,7 +6,6 @@ import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import { YouTube } from "@mui/icons-material";
 
-// import "../singleContent/SingleContainer.css";
 import "./contentmodal.css";
 
 import axios from "axios";
@@ -40,9 +39,8 @@ export default function ContentModal({ children, media_type, id, className }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
   const fetchData = async () => {
-    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
-
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/${media_type}/${id}?api_key=${API_KEY}&language=en-US`

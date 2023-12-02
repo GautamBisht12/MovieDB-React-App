@@ -25,9 +25,8 @@ const Genre = ({
     setPage(1);
   };
 
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
   const fetchGenres = async () => {
-    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
-
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/genre/${type}/list?api_key=${API_KEY}`
@@ -35,7 +34,7 @@ const Genre = ({
       console.log(data);
       setGenres(data.genres);
     } catch (error) {
-      console.error("Error fetching Genres");
+      console.error("Error fetching Genres Api");
     }
   };
 

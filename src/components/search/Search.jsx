@@ -12,9 +12,8 @@ const Search = () => {
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
 
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
   const fetchSearch = async () => {
-    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
-
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/search/${

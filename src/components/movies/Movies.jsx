@@ -14,8 +14,8 @@ const Movies = () => {
   const [noOfPages, setNoOfPages] = useState();
   const genreforURL = useGenres(selectedGenres);
 
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
   const fetchMovie = async () => {
-    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/discover/movie/?api_key=${API_KEY}&page=${page}&with_genres=${genreforURL}`

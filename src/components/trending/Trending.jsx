@@ -1,5 +1,3 @@
-import React from "react";
-
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -12,9 +10,8 @@ const Trending = () => {
   const [page, setPage] = useState(1);
   const [trendingContent, setTrendingContent] = useState([]);
 
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
   const fetchTrending = async () => {
-    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
-
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}&page=${page}`
@@ -22,7 +19,7 @@ const Trending = () => {
 
       setTrendingContent(data.results);
     } catch (error) {
-      console.error("Error fetching trending content:", error);
+      console.error("Error fetching trending content api:", error);
     }
   };
 

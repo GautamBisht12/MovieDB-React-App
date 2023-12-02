@@ -15,9 +15,9 @@ const Series = () => {
   const [genres, setGenres] = useState([]);
 
   const genreforURL = useGenres(selectedGenres);
-  const fetchSeries = async () => {
-    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
 
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+  const fetchSeries = async () => {
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&page=${page}&with_genres=${genreforURL}`

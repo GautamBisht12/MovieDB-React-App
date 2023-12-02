@@ -10,16 +10,15 @@ const handleDragStart = (e) => e.preventDefault();
 const Carousel = ({ media_type, id }) => {
   const [credits, setCredits] = useState([]);
 
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
   const fetchCredits = async () => {
-    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
-
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/${media_type}/${id}/credits?api_key=${API_KEY}&language=en-US `
       );
       setCredits(data.cast);
     } catch (error) {
-      console.log("error fetching cast/credits api");
+      console.log("error fetching credits api");
     }
   };
 
