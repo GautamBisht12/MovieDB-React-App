@@ -25,7 +25,7 @@ const Genre = ({
     setPage(1);
   };
 
-  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+  const API_KEY = "68c3ad2897ef4acd7987e0e9218396c0";
   const fetchGenres = async () => {
     try {
       const { data } = await axios.get(

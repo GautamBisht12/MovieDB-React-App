@@ -39,7 +39,7 @@ export default function ContentModal({ children, media_type, id, className }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+  const API_KEY = "68c3ad2897ef4acd7987e0e9218396c0";
   const fetchData = async () => {
     try {
       const { data } = await axios.get(
@@ -51,7 +51,7 @@ export default function ContentModal({ children, media_type, id, className }) {
     }
   };
   const fetchVideo = async () => {
-    const API_KEY = import.meta.env.VITE_API_KEY;
+    const API_KEY = "68c3ad2897ef4acd7987e0e9218396c0";
 
     try {
       const { data } = await axios.get(

@@ -12,7 +12,7 @@ const Search = () => {
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
 
-  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+  const API_KEY = "68c3ad2897ef4acd7987e0e9218396c0";
   const fetchSearch = async () => {
     try {
       const { data } = await axios.get(
