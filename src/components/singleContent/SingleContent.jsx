@@ -30,7 +30,7 @@ const SingleContent = ({
         badgeContent={vote_average}
         color={vote_average > 6 ? "primary" : "secondary"}
       />
-      <Card className="single-card" sx={{ width: 200 }}>
+      <Card className="single-card"  sx={{ width: { xs: "300px", sm: "200px" } }}>
         <CardMedia
           component="img"
           image={
@@ -38,6 +38,7 @@ const SingleContent = ({
               ? `${img_300}/https://image.tmdb.org/t/p/original/${poster}`
               : unavailable
           }
+          sx={{ objectFit: "inherit" }}
           alt={title}
         />
         <CardContent className="single-card">
