@@ -14,8 +14,8 @@ const Movies = () => {
   const [noOfPages, setNoOfPages] = useState();
   const genreforURL = useGenres(selectedGenres);
 
-  const API_KEY = "68c3ad2897ef4acd7987e0e9218396c0";
   const fetchMovie = async () => {
+    const API_KEY = "68c3ad2897ef4acd7987e0e9218396c0";
     try {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/discover/movie/?api_key=${API_KEY}&page=${page}&with_genres=${genreforURL}`
