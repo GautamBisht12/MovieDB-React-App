@@ -14,24 +14,32 @@ const Movies = () => {
   const [noOfPages, setNoOfPages] = useState();
   const genreforURL = useGenres(selectedGenres);
 
+  const API_KEY = "68c3ad2897ef4acd7987e0e9218396c0";
+
   const fetchMovie = async () => {
-    const API_KEY = "68c3ad2897ef4acd7987e0e9218396c0";
-    try {
-      const { data } = await axios.get(
-        `https://api.themoviedb.org/3/discover/movie/?api_key=${API_KEY}&page=${page}&with_genres=${genreforURL}`
-      );
-      console.log(data);
-      setMovieContent(data.results);
-      setNoOfPages(data.total_pages);
-    } catch (error) {
-      console.error("Error fetching movie content:", error);
-    }
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`
+    );
+    setMovieContent(data.results);
+    setNoOfPages(data.total_pages);
   };
+
+  // const fetchMovie = async () => {
+  //   try {
+  //     const { data } = await axios.get(
+  //       `https://api.themoviedb.org/3/discover/movie/?api_key=${API_KEY}&page=${page}&with_genres=${genreforURL}`
+  //     );
+  //     console.log(data);
+  //     setMovieContent(data.results);
+  //     setNoOfPages(data.total_pages);
+  //   } catch (error) {
+  //     console.error("Error fetching movie content:", error);
+  //   }
+  // };
 
   useEffect(() => {
     window.scroll(0, 0);
     fetchMovie();
-    
   }, [genreforURL, page]);
   return (
     <>
